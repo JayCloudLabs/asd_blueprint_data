@@ -49,6 +49,11 @@ jobs:
           repository: JayCloudLabs/asd_blueprint_data
           ref: main
 
+      - name: Set Git Identity
+        run: |
+          git config user.name "github-app"
+          git config user.email ""
+
       - name: Add public repo as upstream
         run: |
           git remote add upstream https://github.com/ASD-Blueprint/ASD-Blueprint-for-Secure-Cloud.git
